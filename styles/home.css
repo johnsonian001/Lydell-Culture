@@ -1,0 +1,345 @@
+/*********************************************************
+    STYLE SHEET FOR FINAL PROJECT - SITE HOME PAGE - IAN JOHNSON
+*********************************************************/
+
+/*Color Variables*/
+
+:root {
+    --primarygreen: #01824A; 
+    --skyblue: #60A5FA; 
+    --charcoal: #1F2937; 
+    --offwhite: #F8FAF9; 
+    --softmint: #D9F3E6;
+    --lightgraygreen: #EEF4F0;
+}
+
+/*Reset*/
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/*Default Styles*/ 
+
+body {
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {font-size: 150%}
+h2 {font-size: 135%}
+h3 {font-size: 120%}
+li, p {font-size: 100%}
+
+/*Header General Declarations*/
+
+header {
+    display: flex; 
+    align-items: center;
+    background-image: linear-gradient(to right, var(--lightgraygreen) 0%, var(--softmint) 100%);
+}
+
+/* Header Image*/ 
+
+header img {
+        max-width: 200px;
+        padding-left: 2em;
+        padding-top: 1em;
+        padding-right: 2em;
+}
+
+/*Header Main Title On The Left*/ 
+
+header h1 {
+        font-size: 300%;
+        font-family: "Overpass";
+        color: var(--primarygreen); 
+        flex-basis: 45%;
+    }
+
+/*Header Tag Line On The Right*/ 
+
+header h2 {
+        font-size: 225%;
+        font-family: "Oswald";
+        color: var(--primarygreen);
+        padding-right: 1em;
+    }
+    
+/*Set the background color of the main section */ 
+
+main {
+    background-color: var(--lightgraygreen); 
+    }
+
+/* Set the background color of the nav bar and the text color */
+
+.navbar {
+    background-color: var(--primarygreen); 
+    }
+
+/* Format the nav bar */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0.5rem 0; 
+    }
+
+.menu li:has(.submenu) {
+        position: relative; 
+    }
+.menu li small {
+        margin-left: 0.25em; 
+    }
+.menu li:hover > .submenu {
+        display: block; 
+}
+
+.submenu {
+    position: absolute; 
+    left: 0;
+    background-color: var(--primarygreen);
+    color: var(--offwhite); 
+    width: fit-content; 
+    display: none; 
+    list-style-type: none;
+}
+
+.menu a { 
+        text-decoration: none; 
+        color: var(--offwhite);
+        display: block; 
+        padding: 0 0.5em;
+}
+
+.menu a:hover, 
+.menu a:focus {
+            text-decoration: underline; 
+}
+
+.menu a:visited { 
+            color: var(--offwhite);
+}
+
+.menu a.current {
+            color: var(--primarygreen);
+            background-color: var(--offwhite);
+            text-decoration: none;
+}
+
+/*Nav bar font and spacing plus giving each button borders*/
+
+.menu > li {
+            font-family: "Overpass"; 
+            color: var(--offwhite);
+            font-size: 200%;
+            padding: 0.1em 1.5em;
+            margin: 0 1em;
+            border-left: 2px solid var(--offwhite);
+            border-right: 2px solid var(--offwhite);
+        }
+
+
+.div1 {
+    margin: 2em 2em;
+    padding-bottom: 3em;
+    border-bottom: 4px dashed var(--primarygreen);
+}
+
+.div1 h2 {
+    text-align:center;
+    font-size: 300%;
+    font-family: "Overpass";
+    color: var(--primarygreen);
+    padding-bottom: 2rem;
+}
+
+.div1 .photo-container-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 2rem;
+    margin: 0 6em;
+}
+
+.photo-container-flex img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.div1 .photo-container-flex .photo1 {
+    font-family: "Urbanist";
+}
+
+.div1 .photo-container-flex .photo2 {
+    font-family: "Urbanist";
+}
+
+.div1 .photo-container-flex .photo3 {
+    font-family: "Urbanist";
+}
+
+.div2 {
+    display: flex;
+    margin: 2em;
+    padding-top: 2em;
+}
+
+.div2 section {
+    flex-basis: 50%;
+}
+
+.div2 aside {
+    display: flex;
+    margin-right: 5rem;
+    flex-basis: 50%;
+    justify-content: flex-end;  
+    align-items: center;
+}
+
+.div2 section h2 {
+    text-align:center;
+    font-size: 300%;
+    font-family: "Overpass";
+    color: var(--primarygreen);
+    padding-bottom: 1rem;
+}
+
+.div2 section p {
+    text-align: left;
+    font-family: "Urbanist";
+    font-size: 140%;
+    padding-left: 5em;
+    line-height: 1.6;
+}
+
+.div2 aside img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    justify-content: right;
+}
+
+main h3 {
+    text-align: center;
+    font-size: 200%;
+    font-family: "Urbanist";
+    color: var(--primarygreen);
+    padding: 1em 0;
+}
+
+footer { 
+    background-color: var(--primarygreen);
+    height: fit-content;
+    padding: 1em 5em; 
+}
+footer h2 {
+    color: var(--offwhite); 
+    font-family: "Overpass";
+    font-size: 200%;
+}
+footer h3 {
+    color: var(--offwhite);
+    font-family: "Oswald";
+    font-size: 155%;
+}
+footer p {
+    color: var(--offwhite);
+    font-family: "Oswald";
+    font-size: 125%;
+}
+
+/*Mobile Friendly*/
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header img {
+        max-width: 150px;
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        flex-basis: auto;
+    }
+
+    header h2 {
+        font-size: 1.4rem;
+        padding: 0;
+    }
+        .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu > li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0.75rem;
+        border: none;
+        border-bottom: 1px solid white;
+        font-size: 1.3rem;
+    }
+
+    .div1 .photo-container-flex {
+        flex-direction: column;
+        margin: 0;
+        gap: 2rem;
+    }
+
+    .photo-container-flex img {
+        width: 100%;
+        height: auto;
+    }
+        .div2 {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .div2 section {
+        order: 2;
+    }
+
+    .div2 aside {
+        order: 1;
+        margin: 0 0 2rem 0;
+        justify-content: center;
+    }
+
+    .div2 aside img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+    .div2 section p {
+        padding: 0 1rem;
+        font-size: 1.1rem;
+    }
+    footer {
+        padding: 1rem;
+        text-align: center;
+    }
+    footer h2 {
+        font-size: 1.5rem;
+    }
+    footer h3 {
+        font-size: 1.2rem;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+}
+
